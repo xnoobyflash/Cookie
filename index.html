@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Clone</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container-fluid py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="game-title mb-4">Cookie Clicker</h1>
+                <div class="cookie-container mb-4">
+                    <div id="cookieCount" class="cookie-count mb-3">0 cookies</div>
+                    <button id="cookieButton" class="cookie-button">
+                        <img src="{{ url_for('static', filename='images/cookie.svg') }}" alt="Cookie" class="cookie-image">
+                    </button>
+                </div>
+                <div class="code-container">
+                    <div class="code-input-group">
+                        <input type="text" id="codeInput" class="code-input" placeholder="Enter code">
+                        <button id="toggleCodeVisibility" class="btn btn-secondary">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                    <button id="submitCode" class="btn btn-primary">Submit Code</button>
+                    <button id="resetGame" class="btn btn-danger">Reset Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
